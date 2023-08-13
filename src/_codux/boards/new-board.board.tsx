@@ -1,5 +1,5 @@
 import { createBoard } from '@wixc3/react-board';
-import { Accordion, Button, Icon } from 'semantic-ui-react';
+import { Accordion, Button, Icon, Input } from 'semantic-ui-react';
 
 export default createBoard({
     name: 'New Board',
@@ -14,6 +14,11 @@ export default createBoard({
             <Button icon circular color="youtube">
                 <Icon name="youtube" />
             </Button>
+            <div>
+                <Input placeholder="Search..." />
+                <Input label="http://" placeholder="mysite.com" />
+                <Input icon="users" iconPosition="left" placeholder="Search users..." />
+            </div>
         </div>
     ),
 });
