@@ -5,6 +5,7 @@ export default createBoard({
     name: 'New Board',
     Board: () => (
         <div>
+            <Button primary>Primary</Button>
             <Button icon circular color="black">
                 <Icon name="instagram" />
             </Button>
@@ -15,10 +16,17 @@ export default createBoard({
                 <Icon name="youtube" />
             </Button>
             <div>
-                <Input placeholder="Search..." />
-                <Input label="http://" placeholder="mysite.com" />
-                <Input icon="users" iconPosition="left" placeholder="Search users..." />
+                <Input
+                    action={{
+                        color: 'black',
+                        labelPosition: 'right',
+                        icon: 'book',
+                        content: 'Join now',
+                    }}
+                    defaultValue="http://ww.short.url/c0opq"
+                />
             </div>
         </div>
     ),
+    environmentProps: {},
 });
