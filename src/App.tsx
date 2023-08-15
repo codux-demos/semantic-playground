@@ -4,7 +4,7 @@ import { Card, Menu, Feed, Grid } from 'semantic-ui-react';
 import Classnames from 'classnames';
 
 function App() {
-    const [count, setCount] = useState(0);
+  
 
     return (
         <div className={styles.App}>
