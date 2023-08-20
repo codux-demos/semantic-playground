@@ -1,5 +1,5 @@
 import { createBoard } from '@wixc3/react-board';
-import { Accordion, Button, Icon, Input } from 'semantic-ui-react';
+import { Accordion, Button, Icon, Input, Divider } from 'semantic-ui-react';
 
 export default createBoard({
     name: 'New Board',
@@ -9,6 +9,19 @@ export default createBoard({
             <Button icon circular color="black">
                 <Icon name="instagram" />
             </Button>
+            <Button basic color="violet">
+                Violet
+            </Button>
+            <Button basic color="olive">
+                Olive
+            </Button>
+            <Button basic color="teal">
+                Teal
+            </Button>
+            <Button basic>Standard</Button>
+            <div style={{ width: '450px' }}>
+                <Divider />
+            </div>
             <Button icon circular color="facebook">
                 <Icon name="facebook" />
             </Button>

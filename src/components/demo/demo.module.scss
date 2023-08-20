@@ -1,0 +1,13 @@
+.root {
+  grid-column-start: 0;
+  grid-column-end: 0;
+  display: grid;
+  flex-direction: column;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  height: 1080px;
+  width: 900px;
+  justify-items: center;
+}
