@@ -11,17 +11,21 @@
 .grid-element {
   background-color: #e8f0ff;
   width: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .Page-title {
   width: 420px;
   height: 325px;
+  row-gap: 0px;
 }
 .main {
 }
 .title-font {
   font-family: FUTURA;
   font-weight: 400;
-  font-size: 5.5rem;
+  font-size: 80px;
   line-height: 1.1em;
   padding: 5px 10px 0px;
   margin-bottom: 5px;
@@ -35,13 +39,14 @@
   padding-bottom: 5px;
   margin-bottom: 25px;
   line-height: 1.42em;
+  margin-top: 10px;
 }
 .buttons {
-  padding: 0px;
+  padding: 0px 0px 0px 10px;
   display: flex;
   flex-direction: row;
-  gap: 0px 22px;
-  margin-top: 10px;
+  gap: 0px 17px;
+  margin-top: 0px;
   grid-column-start: 1;
   grid-column-end: 3;
 }
@@ -58,24 +63,27 @@
   display: flex;
   grid-template-rows: 1fr 1fr 1fr;
   grid-auto-flow: column;
+  padding-top: 20px;
 }
 .Img-size {
   display: flex;
   flex-direction: row;
   gap: 0px;
-  height: 120px;
+  height: 100px;
   max-width: none;
   width: auto;
 }
 .Two-Columns {
   display: flex;
-  grid-template-columns: 1fr 1fr;
   grid-column-start: 1;
   grid-column-end: 3;
   gap: 0px;
-  grid-template-rows: 1fr;
   flex-direction: row;
+  height: auto;
 }
 .Three-columns {
-  column-gap: 5px;
+  padding-left: 10px;
+  margin: 0px;
+  gap: 5px;
+  display: flex;
 }

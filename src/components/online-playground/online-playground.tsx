@@ -44,13 +44,13 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
                 <div className={classNames(styles['Two-Columns'])}>
                     <Image
                         fluid
-                        label={{ color: 'gr', corner: 'left', icon: 'heart' }}
+                        label={{ color: 'gr', corner: 'left', icon: 'close' }}
                         src="https://react.semantic-ui.com/images/wireframe/image.png"
                         className={styles['Img-size']}
                     />
                     <Image
                         fluid
-                        label={{ color: 'red', corner: 'right', icon: 'file' }}
+                        label={{ color: 'red', corner: 'right', icon: 'heart' }}
                         src="https://react.semantic-ui.com/images/wireframe/image.png"
                         floated="right"
                         className={styles['Img-size']}
@@ -58,22 +58,14 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
                 </div>
                 <div className={styles['Two-Columns']}>
                     <Segment attached color="black">
-                        <Image
-                            label={{
-                                color: 'black',
-                                content: 'Hotel',
-                                icon: 'hotel',
-                                ribbon: true,
-                            }}
-                            src="https://react.semantic-ui.com/images/wireframe/paragraph.png"
-                        />
+                        <Label color="black" ribbon content="Hotel" icon="hotel" />
                         <span>Account Details</span>
+
+                        <Image src="https://react.semantic-ui.com/images/wireframe/paragraph.png" />
                     </Segment>
 
                     <Segment attached color="orange">
-                        <Label color="orange" ribbon="right">
-                            Community
-                        </Label>
+                        <Label color="orange" ribbon="right" content="Overview" />
                         <span>Account Details</span>
 
                         <Image src="https://react.semantic-ui.com/images/wireframe/paragraph.png" />
@@ -82,7 +74,7 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
             </div>
             <div className={styles['grid-element']} />
             <div className={styles['grid-element']}>
-                <div className={classNames(styles.buttons, styles['Three-columns'])}>
+                <div className={classNames(styles['Three-columns']}>
                     <Button.Group
                         buttons={[
                             { key: 'align left', icon: 'align left' },
@@ -99,7 +91,65 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
                         ]}
                     />
                 </div>
+                <div className={classNames(styles['Three-columns']} >
+                    <Button animated>
+                        <Button.Content visible>Next</Button.Content>
+                        <Button.Content hidden>
+                            <Icon name="arrow right" />
+                        </Button.Content>
+                    </Button>
+                    <Button animated="vertical">
+                        <Button.Content hidden>Shop</Button.Content>
+                        <Button.Content visible>
+                            <Icon name="shop" />
+                        </Button.Content>
+                    </Button>
+                    <Button animated="fade">
+                        <Button.Content visible>Sign-up for a Pro account</Button.Content>
+                        <Button.Content hidden>$12.99 a month</Button.Content>
+                    </Button>
+                </div>
+                <div className={styles['Three-columns']}>
+                    <Label image>
+                        <img src="https://react.semantic-ui.com/images/avatar/small/christian.jpg" />
+                        Christian
+                        <Icon name="delete" />
+                    </Label>
+                    <Label image>
+                        <img src="https://react.semantic-ui.com/images/avatar/small/elliot.jpg" />
+                        Elliot
+                        <Icon name="delete" />
+                    </Label>
+                    <Label image>
+                        <img src="https://react.semantic-ui.com/images/avatar/small/zoe.jpg" />
+                        Zoe
+                        <Icon name="delete" />
+                    </Label>
+                </div>
+                <div className={styles['Three-columns']}>
+                    <Label as="a" color="blue" image>
+                        <img src="https://react.semantic-ui.com/images/avatar/small/nan.jpg" />
+                        Veronika
+                        <Label.Detail>Bff</Label.Detail>
+                    </Label>
+                    <Label as="a" color="teal" image>
+                        <img src="https://react.semantic-ui.com/images/avatar/small/jenny.jpg" />
+                        Jenny
+                        <Label.Detail>Friend</Label.Detail>
+                    </Label>
+                    <Label as="a" color="yellow" image>
+                        <img src="https://react.semantic-ui.com/images/avatar/small/joe.jpg" />
+                        Joe<Label.Detail>Co-worker</Label.Detail>
+                    </Label>
+                </div>
+            </div>
+            <div className={classNames(styles['grid-element'], styles.main)}>
                 <div className={styles.buttons}>
+                    <Button.Group>
+                        <Button>Cancel</Button>
+                        <Button.Or />
+                        <Button positive>Save</Button>
+                    </Button.Group>
                     <Button as="div" labelPosition="right">
                         <Button color="red">
                             <Icon name="heart" />
@@ -109,17 +159,8 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
                             2,048
                         </Label>
                     </Button>
-                    <Button.Group
-                        buttons={[
-                            { key: 'align left', icon: 'align left' },
-                            { key: 'align center', icon: 'align center' },
-                            { key: 'align right', icon: 'align right' },
-                            { key: 'align justify', icon: 'align justify' },
-                        ]}
-                    />
                 </div>
             </div>
-            <div className={classNames(styles['grid-element'], styles.main)} />
             <div className={styles['grid-element']} />
             <div className={styles['grid-element']} />
             <div className={styles['grid-element']} />
