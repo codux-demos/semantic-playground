@@ -20,24 +20,22 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
                     ytgu jgjg hjjk swldk e3 dkmd dxm xksn . sdmxs xnodnwclo . dkcec . sekdnc . dksn
                     xksmxlz xksxc skxc pednfc xsocxnx{' '}
                 </p>
-                <div className={styles.buttons}>
-                    <Button color="purple" className={styles['button-size']}>
-                        Read Artical
-                    </Button>
-                    <Button basic color="purple">
+                <div className={styles['button-size']}>
+                    <Button color="black">Read Artical</Button>
+                    <Button basic color="black">
                         Decomentation
                     </Button>
                 </div>
             </div>
             <div className={classNames(styles['grid-element'], styles.Main)}>
                 <div className={styles.buttons}>
-                    <Label color="yellow" tag>
+                    <Label color="olive" tag>
                         New
                     </Label>
-                    <Label color="red" tag>
+                    <Label color="teal" tag>
                         Upcoming
                     </Label>
-                    <Label color="teal" tag>
+                    <Label color="purple" tag>
                         Featured
                     </Label>
                 </div>
@@ -47,6 +45,7 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
                         label={{ color: 'gr', corner: 'left', icon: 'close' }}
                         src="https://react.semantic-ui.com/images/wireframe/image.png"
                         className={styles['Img-size']}
+                        size="small"
                     />
                     <Image
                         fluid
@@ -54,6 +53,7 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
                         src="https://react.semantic-ui.com/images/wireframe/image.png"
                         floated="right"
                         className={styles['Img-size']}
+                        size="small"
                     ></Image>
                 </div>
                 <div className={styles['Two-Columns']}>
@@ -74,7 +74,7 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
             </div>
             <div className={styles['grid-element']} />
             <div className={styles['grid-element']}>
-                <div className={classNames(styles['Three-columns']}>
+                <div className={classNames(styles['Three-columns'])}>
                     <Button.Group
                         buttons={[
                             { key: 'align left', icon: 'align left' },
@@ -91,7 +91,7 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
                         ]}
                     />
                 </div>
-                <div className={classNames(styles['Three-columns']} >
+                <div className={classNames(styles['Three-columns'])}>
                     <Button animated>
                         <Button.Content visible>Next</Button.Content>
                         <Button.Content hidden>
@@ -144,21 +144,21 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
                 </div>
             </div>
             <div className={classNames(styles['grid-element'], styles.main)}>
-                <div className={styles.buttons}>
-                    <Button.Group>
-                        <Button>Cancel</Button>
-                        <Button.Or />
-                        <Button positive>Save</Button>
-                    </Button.Group>
+                <div className={styles['Two-Columns']}>
                     <Button as="div" labelPosition="right">
                         <Button color="red">
                             <Icon name="heart" />
                             Like
                         </Button>
                         <Label basic color="red" pointing="left">
-                            2,048
+                            2,104
                         </Label>
                     </Button>
+                    <Button.Group>
+                        <Button>Cancel</Button>
+                        <Button.Or />
+                        <Button positive>Save</Button>
+                    </Button.Group>
                 </div>
             </div>
             <div className={styles['grid-element']} />
