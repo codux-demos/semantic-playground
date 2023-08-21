@@ -14,34 +14,38 @@ export interface LayoutIndicatorProps {
 export const LayoutIndicator = ({ className }: LayoutIndicatorProps) => {
     return (
         <div className={classNames(styles.container, className)}>
-            <div className={classNames(styles.indicator, styles['text-container'])}>
-                <h1 className={styles['heading-font']}>Semantic UI </h1>
-                <p className={styles['prgrp-font']}>
-                    This is a paragraph. about how semantic is good, and we are - as a group, also
-                    very very good group. Good pips, good vibe, nice product, needs a change but
-                    it&apos;s ok.{' '}
-                </p>
+            <div className={classNames(styles.indicator)}>
+                <div className={classNames(styles['text-container'])}>
+                    <h1 className={styles['heading-font']}>Semantic UI </h1>
+                    <p className={styles['prgrp-font']}>
+                        This is a paragraph. about how semantic is good, and we are - as a group,
+                        also very very good group. Good pips, good vibe, nice product, needs a
+                        change but it&apos;s ok
+                    </p>
+                </div>
+                <div className={styles['two-column-layout']}>
+                    <Button basic color="black" className={styles['btn-size']}>
+                        Black
+                    </Button>
+                    <Button basic color="blue" className={styles['btn-size']}>
+                        Blue
+                    </Button>
+                </div>
             </div>
+
             <div className={styles.indicator}>
                 <div className={classNames(styles.indicator, styles['two-column-layout'])}>
-                    <div>
-                        <Button basic color="black">
-                            Black
-                        </Button>
-                    </div>
+                    <div></div>
                     <Button basic color="orange">
                         Orange
-                    </Button>
-                    <Button basic color="brown">
-                        Brown
                     </Button>
                     <Button basic color="green">
                         Green
                     </Button>
-                    <Button basic color="blue">
-                        Blue
-                    </Button>
                 </div>
+                <Button basic color="black">
+                    Black
+                </Button>
             </div>
             <div className={styles.indicator} />
             <div className={styles.indicator} />

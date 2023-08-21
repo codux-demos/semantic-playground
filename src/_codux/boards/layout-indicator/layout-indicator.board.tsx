@@ -4,4 +4,5 @@ import { LayoutIndicator } from '../../../components/layout-indicator/layout-ind
 export default createBoard({
     name: 'LayoutIndicator',
     Board: () => <LayoutIndicator />,
+    environmentProps: {},
 });

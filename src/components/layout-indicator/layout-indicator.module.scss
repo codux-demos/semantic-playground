@@ -7,10 +7,13 @@
 }
 .indicator {
   background-color: #bcb4b4;
-  height: 400px;
+  /* height: 400px; */
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+  display: flex;
+  flex-direction: column;
 }
+
 .heading-font {
   font-size: 70px;
   font-family: futura;
@@ -19,12 +22,20 @@
 }
 .text-container {
   height: 200px;
-  width: 400px;
+  display: flex;
+  flex-direction: column;
 }
 .prgrp-font {
   font-family: futura;
   margin: 10px;
 }
 .two-column-layout {
-  display: grid;
+  display: flex;
+  flex-direction: row;
+  gap: 0px 18px;
+  margin: 0px;
+  padding-left: 0px;
+}
+.btn-size {
+  width: 120px;
 }

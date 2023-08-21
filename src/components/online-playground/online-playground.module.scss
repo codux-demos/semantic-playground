@@ -1,0 +1,78 @@
+.root {
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 20px;
+  width: 1000px;
+  height: 640px;
+}
+.grid-element {
+  background-color: #e8f0ff;
+  width: auto;
+}
+.Page-title {
+  width: 420px;
+  height: 360px;
+}
+.main {
+}
+.title-font {
+  font-family: FUTURA;
+  font-weight: 400;
+  font-size: 5.5rem;
+  line-height: 1.1em;
+  padding: 5px 10px 0px;
+}
+.prgrp-font {
+  font-family: futura;
+  font-weight: 300;
+  font-size: 16px;
+  padding-right: 25px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  line-height: 1.42em;
+}
+.buttons {
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  gap: 0px 22px;
+  margin-top: 30px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: 320px;
+}
+.button-size {
+  width: 120px;
+}
+.Main {
+  width: 320px;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  flex-direction: row;
+  height: 360px;
+  align-items: start;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-auto-flow: column;
+}
+.Img-size {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  height: 120px;
+  max-width: none;
+  width: auto;
+}
+.Two-Columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  gap: 0px;
+  width: 320px;
+  grid-template-rows: 1fr;
+}
