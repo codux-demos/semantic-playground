@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import styles from './online-playground.module.scss';
-import { Button, Image, Label, Segment } from 'semantic-ui-react';
+import { Button, Image, Label, Segment, Icon } from 'semantic-ui-react';
 
 export interface OnlinePlaygroundProps {
     className?: string;
@@ -58,11 +58,16 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
                 </div>
                 <div className={styles['Two-Columns']}>
                     <Segment attached color="black">
-                        <Label color="black" ribbon>
-                            Overview
-                        </Label>
+                        <Image
+                            label={{
+                                color: 'black',
+                                content: 'Hotel',
+                                icon: 'hotel',
+                                ribbon: true,
+                            }}
+                            src="https://react.semantic-ui.com/images/wireframe/paragraph.png"
+                        />
                         <span>Account Details</span>
-                        <Image src="https://react.semantic-ui.com/images/wireframe/paragraph.png" />
                     </Segment>
 
                     <Segment attached color="orange">
@@ -76,7 +81,44 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
                 </div>
             </div>
             <div className={styles['grid-element']} />
-            <div className={styles['grid-element']} />
+            <div className={styles['grid-element']}>
+                <div className={classNames(styles.buttons, styles['Three-columns'])}>
+                    <Button.Group
+                        buttons={[
+                            { key: 'align left', icon: 'align left' },
+                            { key: 'align center', icon: 'align center' },
+                            { key: 'align right', icon: 'align right' },
+                            { key: 'align justify', icon: 'align justify' },
+                        ]}
+                    />
+                    <Button.Group
+                        buttons={[
+                            { key: 'align left', icon: 'bold' },
+                            { key: 'align center', icon: 'underline' },
+                            { key: 'align right', icon: 'text width' },
+                        ]}
+                    />
+                </div>
+                <div className={styles.buttons}>
+                    <Button as="div" labelPosition="right">
+                        <Button color="red">
+                            <Icon name="heart" />
+                            Like
+                        </Button>
+                        <Label basic color="red" pointing="left">
+                            2,048
+                        </Label>
+                    </Button>
+                    <Button.Group
+                        buttons={[
+                            { key: 'align left', icon: 'align left' },
+                            { key: 'align center', icon: 'align center' },
+                            { key: 'align right', icon: 'align right' },
+                            { key: 'align justify', icon: 'align justify' },
+                        ]}
+                    />
+                </div>
+            </div>
             <div className={classNames(styles['grid-element'], styles.main)} />
             <div className={styles['grid-element']} />
             <div className={styles['grid-element']} />
