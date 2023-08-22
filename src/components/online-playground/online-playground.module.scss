@@ -9,16 +9,17 @@
   height: 640px;
 }
 .grid-element {
-  background-color: #e8f0ff;
   width: auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  background-color: rgba(232, 240, 255, 1);
 }
 .Page-title {
   width: 420px;
-  height: 325px;
+  height: 333px;
   row-gap: 0px;
+  padding: 2px 0px 20px;
 }
 .main {
 }
@@ -28,7 +29,8 @@
   font-size: 80px;
   line-height: 1.1em;
   padding: 5px 10px 0px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  min-height: auto;
 }
 .prgrp-font {
   font-family: futura;
@@ -37,12 +39,13 @@
   padding-right: 25px;
   padding-left: 10px;
   padding-bottom: 5px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   line-height: 1.42em;
-  margin-top: 10px;
+  margin-top: 0px;
+  padding-top: 0px;
 }
 .buttons {
-  padding: 0px;
+  padding: 0px 0px 0px 2px;
   display: flex;
   flex-direction: row;
   gap: 0px 10px;
@@ -55,6 +58,7 @@
   display: flex;
   flex-direction: row;
   gap: 10px;
+  padding: 0px 0px 0px 10px;
 }
 .Main {
   width: 320px;

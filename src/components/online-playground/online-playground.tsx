@@ -72,7 +72,16 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
                     </Segment>
                 </div>
             </div>
-            <div className={styles['grid-element']} />
+            <div className={styles['grid-element']}>
+                <div className={styles['button-size']}>
+                    <Button animated>
+                        <Button.Content visible>Next</Button.Content>
+                        <Button.Content hidden>
+                            <Icon name="arrow right" />
+                        </Button.Content>
+                    </Button>
+                </div>
+            </div>
             <div className={styles['grid-element']}>
                 <div className={classNames(styles['Three-columns'])}>
                     <Button.Group
@@ -143,7 +152,7 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
                     </Label>
                 </div>
             </div>
-            <div className={classNames(styles['grid-element'], styles.main)}>
+            <div className={styles['grid-element']}>
                 <div className={styles['Two-Columns']}>
                     <Button as="div" labelPosition="right">
                         <Button color="red">
@@ -161,7 +170,7 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
                     </Button.Group>
                 </div>
             </div>
-            <div className={styles['grid-element']} />
+            <div className={styles['grid-element']}></div>
             <div className={styles['grid-element']} />
             <div className={styles['grid-element']} />
             <div className={styles['grid-element']} />
