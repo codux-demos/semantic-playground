@@ -33,7 +33,7 @@ export const LayoutIndicator = ({ className }: LayoutIndicatorProps) => {
                 </div>
             </div>
 
-            <div className={styles.indicator}>
+            <div className={classNames(styles.indicator, styles['bg-color'])}>
                 <div className={classNames(styles.indicator, styles['two-column-layout'])}>
                     <div></div>
                     <Button basic color="orange">
@@ -47,7 +47,7 @@ export const LayoutIndicator = ({ className }: LayoutIndicatorProps) => {
                     Black
                 </Button>
             </div>
-            <div className={styles.indicator} />
+            <div className={classNames(styles.indicator, styles['bg-color'])} />
             <div className={styles.indicator} />
             <div className={styles.indicator} />
             <div className={styles.indicator} style={{ background: 'royalblue' }} />

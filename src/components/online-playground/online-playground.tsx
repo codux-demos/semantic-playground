@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import styles from './online-playground.module.scss';
-import { Button, Image, Label, Segment, Icon } from 'semantic-ui-react';
+import { Button, Image, Label, Segment, Icon, Card } from 'semantic-ui-react';
 
 export interface OnlinePlaygroundProps {
     className?: string;
@@ -154,6 +154,44 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
             </div>
             <div className={styles['grid-element']}>
                 <div className={styles['Two-Columns']}>
+                    <Button as="div" labelPosition="right">
+                        <Button color="red">
+                            <Icon name="heart" />
+                            Like
+                        </Button>
+                        <Label basic color="red" pointing="left">
+                            2,104
+                        </Label>
+                    </Button>
+                    <Button.Group>
+                        <Button>Cancel</Button>
+                        <Button.Or />
+                        <Button positive>Save</Button>
+                    </Button.Group>
+                </div>
+                <div className={styles['Two-Columns']}>
+                    <Card>
+                        <Image
+                            src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
+                            wrapped
+                            ui={false}
+                        />
+                        <Card.Content>
+                            <Card.Header>Matthew</Card.Header>
+                            <Card.Meta>
+                                <span className="date">Joined in 2015</span>
+                            </Card.Meta>
+                            <Card.Description>
+                                Matthew is a musician living in Nashville.
+                            </Card.Description>
+                        </Card.Content>
+                        <Card.Content extra>
+                            <a>
+                                <Icon name="user" />
+                                22 Friends
+                            </a>
+                        </Card.Content>
+                    </Card>
                     <Button as="div" labelPosition="right">
                         <Button color="red">
                             <Icon name="heart" />
