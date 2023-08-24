@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import styles from './online-playground.module.scss';
-import { Button, Image, Label, Segment, Icon, Card } from 'semantic-ui-react';
+import { Button, Image, Label, Segment, Icon, Card, Form, Progress } from 'semantic-ui-react';
 
 export interface OnlinePlaygroundProps {
     className?: string;
@@ -73,13 +73,28 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
                 </div>
             </div>
             <div className={styles['grid-element']}>
-                <div className={styles['button-size']}>
-                    <Button animated>
-                        <Button.Content visible>Next</Button.Content>
-                        <Button.Content hidden>
-                            <Icon name="arrow right" />
-                        </Button.Content>
-                    </Button>
+                <div className={classNames(styles['grid-element'], styles.right)}>
+                    <Card fluid={true}>
+                        <Image
+                            fluid={true}
+                            centered={true}
+                            src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
+                            wrapped
+                            ui={true}
+                        />
+                        <Card.Content>
+                            <Card.Header>Matthew</Card.Header>
+                            <Card.Meta>
+                                <span className="date">Joined in 2015</span>
+                            </Card.Meta>
+                        </Card.Content>
+                        <Card.Content extra={true}>
+                            <a>
+                                <Icon name="user" />
+                                22 Friends
+                            </a>
+                        </Card.Content>
+                    </Card>
                 </div>
             </div>
             <div className={styles['grid-element']}>
@@ -169,55 +184,44 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
                         <Button positive>Save</Button>
                     </Button.Group>
                 </div>
-                <div className={styles['Two-Columns']}>
-                    <Card>
-                        <Image
-                            src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
-                            wrapped
-                            ui={false}
-                        />
-                        <Card.Content>
-                            <Card.Header>Matthew</Card.Header>
-                            <Card.Meta>
-                                <span className="date">Joined in 2015</span>
-                            </Card.Meta>
-                            <Card.Description>
-                                Matthew is a musician living in Nashville.
-                            </Card.Description>
-                        </Card.Content>
-                        <Card.Content extra>
-                            <a>
-                                <Icon name="user" />
-                                22 Friends
-                            </a>
-                        </Card.Content>
-                    </Card>
-                    <Button as="div" labelPosition="right">
-                        <Button color="red">
-                            <Icon name="heart" />
-                            Like
-                        </Button>
-                        <Label basic color="red" pointing="left">
-                            2,104
+                <Form>
+                    <Form.Field inline={false} className={styles['one-line']}>
+                        <span className={styles['input']}>
+                            <input type="text" placeholder="Username" className={styles.input} />
+                        </span>
+                        <Label pointing="left" color="pink" size="medium" className={styles.label}>
+                            That name is taken!
                         </Label>
-                    </Button>
-                    <Button.Group>
-                        <Button>Cancel</Button>
-                        <Button.Or />
-                        <Button positive>Save</Button>
-                    </Button.Group>
-                </div>
+                    </Form.Field>
+                </Form>
+                <Progress percent={64} indicating={false} color="teal" />
             </div>
-            <div className={styles['grid-element']}></div>
-            <div className={styles['grid-element']} />
-            <div className={styles['grid-element']} />
-            <div className={styles['grid-element']} />
-            <div className={styles['grid-element']} />
-            <div className={styles['grid-element']} />
-            <div className={styles['grid-element']} />
-            <div className={styles['grid-element']} />
-            <div className={styles['grid-element']} />
-            <div className={styles['grid-element']} />
+            <div className={styles['grid-element']}>
+                <Card fluid={true}>
+                    <Card.Content>
+                        <Image
+                            floated="right"
+                            size="mini"
+                            src="https://semantic-ui.com/images/avatar2/small/molly.png"
+                        />
+                        <Card.Header>Molly Sanders</Card.Header>
+                        <Card.Meta>Friends of Elliot</Card.Meta>
+                        <Card.Description>
+                            Steve is your <strong>best friends</strong>
+                        </Card.Description>
+                    </Card.Content>
+                    <Card.Content extra>
+                        <div className="ui two buttons">
+                            <Button basic color="green">
+                                Approve
+                            </Button>
+                            <Button basic color="red">
+                                Decline
+                            </Button>
+                        </div>
+                    </Card.Content>
+                </Card>
+            </div>
         </div>
     );
 };
