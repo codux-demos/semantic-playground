@@ -92,7 +92,7 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
             </div>
             <div className={styles['grid-element']}>
                 <div className={classNames(styles['grid-element'], styles.right)}>
-                    <Card fluid={true}>
+                    <Card fluid={true} color="violet">
                         <Image
                             fluid={true}
                             centered={true}
