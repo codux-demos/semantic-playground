@@ -1,6 +1,19 @@
 import classNames from 'classnames';
 import styles from './online-playground.module.scss';
-import { Button, Image, Label, Segment, Icon, Card, Form, Progress } from 'semantic-ui-react';
+import {
+    Button,
+    Image,
+    Label,
+    Segment,
+    Icon,
+    Card,
+    Form,
+    Progress,
+    Breadcrumb,
+    Accordion,
+    Menu,
+    List,
+} from 'semantic-ui-react';
 
 export interface OnlinePlaygroundProps {
     className?: string;
@@ -29,47 +42,52 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
             </div>
             <div className={classNames(styles['grid-element'], styles.Main)}>
                 <div className={styles.buttons}>
-                    <Label color="olive" tag>
+                    <Label color="pink" tag>
                         New
                     </Label>
-                    <Label color="teal" tag>
+                    <Label color="purple" tag>
                         Upcoming
                     </Label>
-                    <Label color="purple" tag>
+                    <Label color="violet" tag>
                         Featured
                     </Label>
                 </div>
-                <div className={classNames(styles['Two-Columns'])}>
-                    <Image
-                        fluid
-                        label={{ color: 'gr', corner: 'left', icon: 'close' }}
-                        src="https://react.semantic-ui.com/images/wireframe/image.png"
-                        className={styles['Img-size']}
-                        size="small"
-                    />
-                    <Image
-                        fluid
-                        label={{ color: 'red', corner: 'right', icon: 'heart' }}
-                        src="https://react.semantic-ui.com/images/wireframe/image.png"
-                        floated="right"
-                        className={styles['Img-size']}
-                        size="small"
-                    ></Image>
+                <div className={styles['Two-Columns']}>
+                    <Segment attached color="teal">
+                        <Label color="teal" ribbon content="Hotel" icon="hotel" />
+                        <span>Account Details</span>
+
+                        <Image src="https://react.semantic-ui.com/images/wireframe/paragraph.png" />
+                    </Segment>
+
+                    <Segment attached color="olive">
+                        <Label color="olive" ribbon="right" content="Overview" />
+                        <span>Account Details</span>
+
+                        <Image src="https://react.semantic-ui.com/images/wireframe/paragraph.png" />
+                    </Segment>
                 </div>
                 <div className={styles['Two-Columns']}>
-                    <Segment attached color="black">
-                        <Label color="black" ribbon content="Hotel" icon="hotel" />
-                        <span>Account Details</span>
-
-                        <Image src="https://react.semantic-ui.com/images/wireframe/paragraph.png" />
-                    </Segment>
-
-                    <Segment attached color="orange">
-                        <Label color="orange" ribbon="right" content="Overview" />
-                        <span>Account Details</span>
-
-                        <Image src="https://react.semantic-ui.com/images/wireframe/paragraph.png" />
-                    </Segment>
+                    <div className={styles['div-img-size']}>
+                        <Image
+                            src="https://semantic-ui.com/images/avatar2/small/molly.png"
+                            size="small"
+                            circular
+                            bordered={true}
+                        />
+                    </div>
+                    <List floated="right">
+                        <List.Item icon="users" content="Semantic UI" />
+                        <List.Item icon="marker" content="New York, NY" />
+                        <List.Item
+                            icon="mail"
+                            content={<a href="mailto:jack@semantic-ui.com">jack@semantic-ui.com</a>}
+                        />
+                        <List.Item
+                            icon="linkify"
+                            content={<a href="http://www.semantic-ui.com">semantic-ui.com</a>}
+                        />
+                    </List>
                 </div>
             </div>
             <div className={styles['grid-element']}>
@@ -166,37 +184,67 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
                         Joe<Label.Detail>Co-worker</Label.Detail>
                     </Label>
                 </div>
-            </div>
-            <div className={styles['grid-element']}>
-                <div className={styles['Two-Columns']}>
-                    <Button as="div" labelPosition="right">
-                        <Button color="red">
-                            <Icon name="heart" />
-                            Like
+                <div className={classNames(styles['top-margin'], styles['Three-columns'])}>
+                    <Menu compact>
+                        <Menu.Item as="a">
+                            <Icon name="mail" /> Messages
+                            <Label color="red" floating>
+                                22
+                            </Label>
+                        </Menu.Item>
+                        <Menu.Item as="a">
+                            <Icon name="users" /> Friends
+                            <Label color="teal" floating>
+                                22
+                            </Label>
+                        </Menu.Item>
+                    </Menu>
+                    <div className={styles['another-gap']}>
+                        <Button as="div" labelPosition="right">
+                            <Button color="red">
+                                <Icon name="heart" />
+                                Like
+                            </Button>
+                            <Label basic color="red" pointing="left">
+                                23,804
+                            </Label>
                         </Button>
-                        <Label basic color="red" pointing="left">
-                            2,104
-                        </Label>
-                    </Button>
-                    <Button.Group>
-                        <Button>Cancel</Button>
-                        <Button.Or />
-                        <Button positive>Save</Button>
-                    </Button.Group>
+                    </div>
                 </div>
+            </div>
+            <div className={styles['grid-mb']}>
                 <Form>
                     <Form.Field inline={false} className={styles['one-line']}>
                         <span className={styles['input']}>
-                            <input type="text" placeholder="Username" className={styles.input} />
+                            <input type="text" placeholder="Username" />
                         </span>
-                        <Label pointing="left" color="pink" size="medium" className={styles.label}>
+                        <Label pointing="left" color="blue" size="medium" className={styles.label}>
                             That name is taken!
                         </Label>
                     </Form.Field>
                 </Form>
-                <Progress percent={64} indicating={false} color="teal" />
+                <div className={styles['prog-size']}>
+                    <Progress percent={25} indicating={false} color="grey" />
+                </div>
+                <div className={classNames(styles['Two-Columns'], styles['top-margin'])}>
+                    <Image
+                        fluid
+                        label={{ color: 'gr', corner: 'left', icon: 'close' }}
+                        src="https://react.semantic-ui.com/images/wireframe/image.png"
+                        className={styles['Img-size']}
+                        size="small"
+                    />
+                    <Image
+                        fluid
+                        label={{ color: 'red', corner: 'right', icon: 'heart' }}
+                        src="https://react.semantic-ui.com/images/wireframe/image.png"
+                        floated="right"
+                        className={styles['Img-size']}
+                        size="small"
+                    ></Image>
+                </div>
             </div>
-            <div className={styles['grid-element']}>
+            <div className={classNames(styles['grid-element'], styles['grid-rb'])}>
                 <Card fluid={true}>
                     <Card.Content>
                         <Image
@@ -221,6 +269,27 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
                         </div>
                     </Card.Content>
                 </Card>
+                <div className={styles.icons}>
+                    <Button icon color="facebook" circular={true}>
+                        <Icon name="facebook" />
+                    </Button>
+                    <Button icon color="linkedin" circular={true}>
+                        <Icon name="linkedin" />
+                    </Button>
+                    <Button icon color="twitter" circular={true}>
+                        <Icon name="twitter" />
+                    </Button>
+                    <Button icon color="youtube" circular={true}>
+                        <Icon name="youtube" />
+                    </Button>
+                </div>
+                <div className={styles.buttons}>
+                    <Button.Group>
+                        <Button>Cancel</Button>
+                        <Button.Or />
+                        <Button positive>Save for later</Button>
+                    </Button.Group>
+                </div>
             </div>
         </div>
     );
