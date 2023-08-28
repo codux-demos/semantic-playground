@@ -195,7 +195,7 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
                         <Menu.Item as="a">
                             <Icon name="users" /> Friends
                             <Label color="teal" floating>
-                                22
+                                24
                             </Label>
                         </Menu.Item>
                     </Menu>
@@ -206,7 +206,7 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
                                 Like
                             </Button>
                             <Label basic color="red" pointing="left">
-                                23,804
+                                27,804
                             </Label>
                         </Button>
                     </div>
