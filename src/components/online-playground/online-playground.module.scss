@@ -73,7 +73,7 @@
   align-items: start;
   display: flex;
   grid-auto-flow: column;
-  padding-top: 20px;
+  padding-top: 30px;
 }
 .Img-size {
   gap: 0px;
@@ -81,6 +81,7 @@
   max-width: none;
   width: 100%;
   margin-left: 0em;
+  margin-top: 12px;
 }
 .Two-Columns {
   display: flex;
@@ -89,7 +90,7 @@
   justify-content: space-between;
   width: 100%;
   margin-bottom: 0px;
-  margin-top: 1px;
+  margin-top: 5px;
 }
 .Three-columns {
   padding-left: 10px;
@@ -141,14 +142,13 @@
 .grid-rb {
   gap: 0px;
 }
-.top-margin {
-  margin-top: 16px;
-}
 .div-img-size {
   width: 120px;
   height: 120px;
+  margin-top: 2px;
 }
 .grid-mb {
+  padding-top: 25px;
 }
 .prog-size {
   margin-top: 20px;
@@ -159,5 +159,5 @@
   margin-left: 23px;
 }
 .top-margin {
-  margin-top: 20px;
+  margin-top: 14px;
 }

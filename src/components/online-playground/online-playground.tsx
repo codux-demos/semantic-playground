@@ -226,7 +226,7 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
                 <div className={styles['prog-size']}>
                     <Progress percent={25} indicating={false} color="grey" />
                 </div>
-                <div className={classNames(styles['Two-Columns'], styles['top-margin'])}>
+                <div className={classNames(styles['Two-Columns'], styles['Img-size'])}>
                     <Image
                         fluid
                         label={{ color: 'gr', corner: 'left', icon: 'close' }}
