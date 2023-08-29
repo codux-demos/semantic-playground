@@ -34,7 +34,7 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
                     xksmxlz xksxc skxc pednfc xsocxnx{' '}
                 </p>
                 <div className={styles['button-size']}>
-                    <Button color="black">Read Artical</Button>
+                    <Button color="black">Read Article</Button>
                     <Button basic color="black">
                         Decomentation
                     </Button>
