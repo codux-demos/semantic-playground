@@ -1,0 +1,19 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  max-width: 360px;
+  margin: 15px;
+  padding: 15px;
+  gap: 15px;
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-content: end;
+  justify-content: end;
+}
+.paragraph {
+  display: flex;
+  flex-direction: column;
+}
