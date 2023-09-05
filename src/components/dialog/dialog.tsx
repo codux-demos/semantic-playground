@@ -4,6 +4,7 @@ import { Button, Header, Input } from 'semantic-ui-react';
 
 export interface DialogProps {
     className?: string;
+    files?: number;
 }
 
 /**
@@ -11,7 +12,7 @@ export interface DialogProps {
  * To create custom component templates, see https://help.codux.com/kb/en/article/kb16522
  */
 
-export const Dialog = ({ className }: DialogProps) => {
+export const Dialog = ({ className, files }: DialogProps) => {
     return (
         <div className={classNames(styles.root, className)}>
             <Header size="small">Commit your changes</Header>
@@ -20,7 +21,7 @@ export const Dialog = ({ className }: DialogProps) => {
                 local until you sync them to a remote repository
             </p>
             <div className={styles.paragraph}>
-                <p>commit 3 files </p>
+                <p>commit {files} files </p>
                 <Input placeholder="Enter a commit message to describe your changes" />
             </div>
             <div className={styles.footer}>
