@@ -27,7 +27,7 @@ export interface OnlinePlaygroundProps {
 export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
     return (
         <div className={styles['grid-container']}>
-            <div className={classNames(styles['grid-element'], styles['Page-title'])}>
+            <div className={classNames(styles['grid-element'], styles['page-title'])}>
                 <h1 className={styles['title-font']}>Semantic UI Is Great</h1>
                 <p className={styles['prgrp-font']}>
                     ytgu jgjg hjjk swldk e3 dkmd dxm xksn . sdmxs xnodnwclo . dkcec . sekdnc . dksn
@@ -40,7 +40,7 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
                     </Button>
                 </div>
             </div>
-            <div className={classNames(styles['grid-element'], styles.Main)}>
+            <div className={classNames(styles['grid-element'], styles.main)}>
                 <div className={styles.buttons}>
                     <Label color="pink" tag>
                         New
@@ -52,7 +52,7 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
                         Featured
                     </Label>
                 </div>
-                <div className={styles['Two-Columns']}>
+                <div className={styles['two-columns']}>
                     <Segment attached color="teal">
                         <Label color="teal" ribbon content="Hotel" icon="hotel" />
                         <span>Account Details</span>
@@ -67,7 +67,7 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
                         <Image src="https://react.semantic-ui.com/images/wireframe/paragraph.png" />
                     </Segment>
                 </div>
-                <div className={styles['Two-Columns']}>
+                <div className={styles['two-columns']}>
                     <div className={styles['div-img-size']}>
                         <Image
                             src="https://semantic-ui.com/images/avatar2/small/molly.png"
@@ -116,7 +116,7 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
                 </div>
             </div>
             <div className={styles['grid-element']}>
-                <div className={classNames(styles['Three-columns'])}>
+                <div className={classNames(styles['three-columns'])}>
                     <Button.Group
                         buttons={[
                             { key: 'align left', icon: 'align left' },
@@ -133,7 +133,7 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
                         ]}
                     />
                 </div>
-                <div className={classNames(styles['Three-columns'])}>
+                <div className={classNames(styles['three-columns'])}>
                     <Button animated>
                         <Button.Content visible>Next</Button.Content>
                         <Button.Content hidden>
@@ -151,7 +151,7 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
                         <Button.Content hidden>$12.99 a month</Button.Content>
                     </Button>
                 </div>
-                <div className={styles['Three-columns']}>
+                <div className={styles['three-columns']}>
                     <Label image>
                         <img src="https://react.semantic-ui.com/images/avatar/small/christian.jpg" />
                         Christian
@@ -168,7 +168,7 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
                         <Icon name="delete" />
                     </Label>
                 </div>
-                <div className={styles['Three-columns']}>
+                <div className={styles['three-columns']}>
                     <Label as="a" color="blue" image>
                         <img src="https://react.semantic-ui.com/images/avatar/small/nan.jpg" />
                         Veronika
@@ -184,7 +184,7 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
                         Joe<Label.Detail>Co-worker</Label.Detail>
                     </Label>
                 </div>
-                <div className={classNames(styles['top-margin'], styles['Three-columns'])}>
+                <div className={classNames(styles['top-margin'], styles['three-columns'])}>
                     <Menu compact>
                         <Menu.Item as="a">
                             <Icon name="mail" /> Messages
@@ -226,12 +226,12 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
                 <div className={styles['prog-size']}>
                     <Progress percent={25} indicating={false} color="grey" />
                 </div>
-                <div className={classNames(styles['Two-Columns'], styles['Img-size'])}>
+                <div className={classNames(styles['two-columns'], styles['img-size'])}>
                     <Image
                         fluid
                         label={{ color: 'gr', corner: 'left', icon: 'close' }}
                         src="https://react.semantic-ui.com/images/wireframe/image.png"
-                        className={styles['Img-size']}
+                        className={styles['img-size']}
                         size="small"
                     />
                     <Image
@@ -239,7 +239,7 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
                         label={{ color: 'red', corner: 'right', icon: 'heart' }}
                         src="https://react.semantic-ui.com/images/wireframe/image.png"
                         floated="right"
-                        className={styles['Img-size']}
+                        className={styles['img-size']}
                         size="small"
                     ></Image>
                 </div>
@@ -259,14 +259,14 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
                         </Card.Description>
                     </Card.Content>
                     <Card.Content extra>
-                        <div className="ui two buttons">
+                        <Button.Group>
                             <Button basic color="green">
                                 Approve
                             </Button>
                             <Button basic color="red">
                                 Decline
                             </Button>
-                        </div>
+                        </Button.Group>
                     </Card.Content>
                 </Card>
                 <div className={styles.icons}>
