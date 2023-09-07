@@ -9,8 +9,6 @@ import {
     Card,
     Form,
     Progress,
-    Breadcrumb,
-    Accordion,
     Menu,
     List,
 } from 'semantic-ui-react';
