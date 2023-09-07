@@ -36,7 +36,7 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
                 <div className={styles['button-size']}>
                     <Button color="black">Read Article</Button>
                     <Button basic color="black">
-                        Decomentation
+                        Documentation
                     </Button>
                 </div>
             </div>
@@ -255,7 +255,7 @@ export const OnlinePlayground = ({ className }: OnlinePlaygroundProps) => {
                         <Card.Header>Molly Sanders</Card.Header>
                         <Card.Meta>Friends of Elliot</Card.Meta>
                         <Card.Description>
-                            Steve is your <strong>best friends</strong>
+                            Steve is your <strong>best friend</strong>
                         </Card.Description>
                     </Card.Content>
                     <Card.Content extra>
