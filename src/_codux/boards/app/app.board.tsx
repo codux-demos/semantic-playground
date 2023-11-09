@@ -1,11 +1,11 @@
 import { createBoard } from '@wixc3/react-board';
-import { OnlinePlayground } from '../../../components/online-playground/online-playground';
+import App from '../../../App';
 
 export default createBoard({
-    name: 'OnlinePlayground',
-    Board: () => <OnlinePlayground />,
+    name: 'App',
+    Board: () => <App />,
     isSnippet: true,
-    environmentProps: {
+        environmentProps: {
         windowWidth: 1024,
         windowHeight: 640,
         windowBackgroundColor: '#d2c9ed',

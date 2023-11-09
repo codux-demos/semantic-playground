@@ -1,59 +1,285 @@
-import { useState } from 'react';
 import classNames from 'classnames';
-import { ReactComponent as ReactLogo } from './assets/react.svg';
-import { ReactComponent as ViteLogo } from './assets/vite.svg';
-import { ReactComponent as TypescriptLogo } from './assets/typescript.svg';
-import { ReactComponent as ScssLogo } from './assets/scss.svg';
+import {
+    Button,
+    Card,
+    Form,
+    Icon,
+    Image,
+    Label,
+    List,
+    Menu,
+    Progress,
+    Segment,
+} from 'semantic-ui-react';
 import styles from './App.module.scss';
 
 function App() {
-    const [count, setCount] = useState(0);
-
     return (
-        <div className={styles.App}>
-            <div>
-                <a href="https://vitejs.dev" target="_blank">
-                    <ViteLogo
-                        height="6em"
-                        width="6em"
-                        className={classNames(styles.logo)}
-                        title="Vite logo"
-                    />
-                </a>
-                <a href="https://reactjs.org" target="_blank">
-                    <ReactLogo
-                        height="6em"
-                        width="6em"
-                        className={classNames(styles.logo, styles.react)}
-                        title="React logo"
-                    />
-                </a>
-                <a href="https://www.typescriptlang.org/" target="_blank">
-                    <TypescriptLogo
-                        height="6em"
-                        width="6em"
-                        className={classNames(styles.logo, styles.ts)}
-                        title="Typescript logo"
-                    />
-                </a>
-                <a href="https://sass-lang.com/" target="_blank">
-                    <ScssLogo
-                        height="6em"
-                        width="6em"
-                        className={classNames(styles.logo, styles.scss)}
-                        title="SCSS logo"
-                    />
-                </a>
-            </div>
-            <div className={styles.card}>
-                <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-                <p>
-                    Edit <code>src/App.tsx</code> and save to test HMR
+        <div className={styles['grid-container']}>
+            <div className={classNames(styles['grid-element'], styles['page-title'])}>
+                <h1 className={styles['title-font']}>Semantic UI Is Great</h1>
+                <p className={styles['prgrp-font']}>
+                    ytgu jgjg hjjk swldk e3 dkmd dxm xksn . sdmxs xnodnwclo . dkcec . sekdnc . dksn
+                    xksmxlz xksxc skxc pednfc xsocxnx{' '}
                 </p>
+                <div className={styles['button-size']}>
+                    <Button color="black">Read Article</Button>
+                    <Button basic color="black">
+                        Documentation
+                    </Button>
+                </div>
             </div>
-            <p className={styles['read-the-docs']}>
-                Click on the Vite and React logos to learn more
-            </p>
+            <div className={classNames(styles['grid-element'], styles.main)}>
+                <div className={styles.buttons}>
+                    <Label color="pink" tag>
+                        New
+                    </Label>
+                    <Label color="purple" tag>
+                        Upcoming
+                    </Label>
+                    <Label color="violet" tag>
+                        Featured
+                    </Label>
+                </div>
+                <div className={styles['two-columns']}>
+                    <Segment attached color="teal">
+                        <Label color="teal" ribbon content="Hotel" icon="hotel" />
+                        <span>Account Details</span>
+
+                        <Image src="https://react.semantic-ui.com/images/wireframe/paragraph.png" />
+                    </Segment>
+
+                    <Segment attached color="olive">
+                        <Label color="olive" ribbon="right" content="Overview" />
+                        <span>Account Details</span>
+
+                        <Image src="https://react.semantic-ui.com/images/wireframe/paragraph.png" />
+                    </Segment>
+                </div>
+                <div className={styles['two-columns']}>
+                    <div className={styles['div-img-size']}>
+                        <Image
+                            src="https://semantic-ui.com/images/avatar2/small/molly.png"
+                            size="small"
+                            circular
+                            bordered={true}
+                        />
+                    </div>
+                    <List floated="right">
+                        <List.Item icon="users" content="Semantic UI" />
+                        <List.Item icon="marker" content="New York, NY" />
+                        <List.Item
+                            icon="mail"
+                            content={<a href="mailto:jack@semantic-ui.com">jack@semantic-ui.com</a>}
+                        />
+                        <List.Item
+                            icon="linkify"
+                            content={<a href="http://www.semantic-ui.com">semantic-ui.com</a>}
+                        />
+                    </List>
+                </div>
+            </div>
+            <div className={styles['grid-element']}>
+                <div className={classNames(styles['grid-element'], styles.right)}>
+                    <Card fluid={true} color="violet">
+                        <Image
+                            fluid={true}
+                            centered={true}
+                            src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
+                            wrapped
+                            ui={true}
+                        />
+                        <Card.Content>
+                            <Card.Header>Matthew</Card.Header>
+                            <Card.Meta>
+                                <span className="date">Joined in 2015</span>
+                            </Card.Meta>
+                        </Card.Content>
+                        <Card.Content extra={true}>
+                            <a>
+                                <Icon name="user" />
+                                22 Friends
+                            </a>
+                        </Card.Content>
+                    </Card>
+                </div>
+            </div>
+            <div className={styles['grid-element']}>
+                <div className={classNames(styles['three-columns'])}>
+                    <Button.Group
+                        buttons={[
+                            { key: 'align left', icon: 'align left' },
+                            { key: 'align center', icon: 'align center' },
+                            { key: 'align right', icon: 'align right' },
+                            { key: 'align justify', icon: 'align justify' },
+                        ]}
+                    />
+                    <Button.Group
+                        buttons={[
+                            { key: 'align left', icon: 'bold' },
+                            { key: 'align center', icon: 'underline' },
+                            { key: 'align right', icon: 'text width' },
+                        ]}
+                    />
+                </div>
+                <div className={classNames(styles['three-columns'])}>
+                    <Button animated>
+                        <Button.Content visible>Next</Button.Content>
+                        <Button.Content hidden>
+                            <Icon name="arrow right" />
+                        </Button.Content>
+                    </Button>
+                    <Button animated="vertical">
+                        <Button.Content hidden>Shop</Button.Content>
+                        <Button.Content visible>
+                            <Icon name="shop" />
+                        </Button.Content>
+                    </Button>
+                    <Button animated="fade">
+                        <Button.Content visible>Sign-up for a Pro account</Button.Content>
+                        <Button.Content hidden>$12.99 a month</Button.Content>
+                    </Button>
+                </div>
+                <div className={styles['three-columns']}>
+                    <Label image>
+                        <img src="https://react.semantic-ui.com/images/avatar/small/christian.jpg" />
+                        Christian
+                        <Icon name="delete" />
+                    </Label>
+                    <Label image>
+                        <img src="https://react.semantic-ui.com/images/avatar/small/elliot.jpg" />
+                        Elliot
+                        <Icon name="delete" />
+                    </Label>
+                    <Label image>
+                        <img src="https://react.semantic-ui.com/images/avatar/small/zoe.jpg" />
+                        Zoe
+                        <Icon name="delete" />
+                    </Label>
+                </div>
+                <div className={styles['three-columns']}>
+                    <Label as="a" color="blue" image>
+                        <img src="https://react.semantic-ui.com/images/avatar/small/nan.jpg" />
+                        Veronika
+                        <Label.Detail>Bff</Label.Detail>
+                    </Label>
+                    <Label as="a" color="teal" image>
+                        <img src="https://react.semantic-ui.com/images/avatar/small/jenny.jpg" />
+                        Jenny
+                        <Label.Detail>Friend</Label.Detail>
+                    </Label>
+                    <Label as="a" color="yellow" image>
+                        <img src="https://react.semantic-ui.com/images/avatar/small/joe.jpg" />
+                        Joe<Label.Detail>Co-worker</Label.Detail>
+                    </Label>
+                </div>
+                <div className={classNames(styles['top-margin'], styles['three-columns'])}>
+                    <Menu compact>
+                        <Menu.Item as="a">
+                            <Icon name="mail" /> Messages
+                            <Label color="red" floating>
+                                22
+                            </Label>
+                        </Menu.Item>
+                        <Menu.Item as="a">
+                            <Icon name="users" /> Friends
+                            <Label color="teal" floating>
+                                24
+                            </Label>
+                        </Menu.Item>
+                    </Menu>
+                    <div className={styles['another-gap']}>
+                        <Button as="div" labelPosition="right">
+                            <Button color="red">
+                                <Icon name="heart" />
+                                Like
+                            </Button>
+                            <Label basic color="red" pointing="left">
+                                27,804
+                            </Label>
+                        </Button>
+                    </div>
+                </div>
+            </div>
+            <div className={styles['grid-mb']}>
+                <Form>
+                    <Form.Field inline={false} className={styles['one-line']}>
+                        <span className={styles['input']}>
+                            <input type="text" placeholder="Username" />
+                        </span>
+                        <Label pointing="left" color="blue" size="medium" className={styles.label}>
+                            That name is taken!
+                        </Label>
+                    </Form.Field>
+                </Form>
+                <div className={styles['prog-size']}>
+                    <Progress percent={25} indicating={false} color="grey" />
+                </div>
+                <div className={classNames(styles['two-columns'], styles['img-size'])}>
+                    <Image
+                        fluid
+                        label={{ color: 'gr', corner: 'left', icon: 'close' }}
+                        src="https://react.semantic-ui.com/images/wireframe/image.png"
+                        className={styles['img-size']}
+                        size="small"
+                    />
+                    <Image
+                        fluid
+                        label={{ color: 'red', corner: 'right', icon: 'heart' }}
+                        src="https://react.semantic-ui.com/images/wireframe/image.png"
+                        floated="right"
+                        className={styles['img-size']}
+                        size="small"
+                    ></Image>
+                </div>
+            </div>
+            <div className={classNames(styles['grid-element'], styles['grid-rb'])}>
+                <Card fluid={true}>
+                    <Card.Content>
+                        <Image
+                            floated="right"
+                            size="mini"
+                            src="https://semantic-ui.com/images/avatar2/small/molly.png"
+                        />
+                        <Card.Header>Molly Sanders</Card.Header>
+                        <Card.Meta>Friends of Elliot</Card.Meta>
+                        <Card.Description>
+                            Steve is your <strong>best friend</strong>
+                        </Card.Description>
+                    </Card.Content>
+                    <Card.Content extra>
+                        <Button.Group>
+                            <Button basic color="green">
+                                Approve
+                            </Button>
+                            <Button basic color="red">
+                                Decline
+                            </Button>
+                        </Button.Group>
+                    </Card.Content>
+                </Card>
+                <div className={styles.icons}>
+                    <Button icon color="facebook" circular={true}>
+                        <Icon name="facebook" />
+                    </Button>
+                    <Button icon color="linkedin" circular={true}>
+                        <Icon name="linkedin" />
+                    </Button>
+                    <Button icon color="twitter" circular={true}>
+                        <Icon name="twitter" />
+                    </Button>
+                    <Button icon color="youtube" circular={true}>
+                        <Icon name="youtube" />
+                    </Button>
+                </div>
+                <div className={styles.buttons}>
+                    <Button.Group>
+                        <Button>Cancel</Button>
+                        <Button.Or />
+                        <Button positive>Save for later</Button>
+                    </Button.Group>
+                </div>
+            </div>
         </div>
     );
 }
