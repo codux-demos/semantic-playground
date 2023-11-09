@@ -19,8 +19,8 @@ function App() {
             <div className={classNames(styles['grid-element'], styles['page-title'])}>
                 <h1 className={styles['title-font']}>Semantic UI Is Great</h1>
                 <p className={styles['prgrp-font']}>
-                    ytgu jgjg hjjk swldk e3 dkmd dxm xksn . sdmxs xnodnwclo . dkcec . sekdnc . dksn
-                    xksmxlz xksxc skxc pednfc xsocxnx{' '}
+                    With Semantic UI, you can create beautiful websites using human-friendly HTML
+                    and intuitive javascript. It’s the ultimate web design tool!
                 </p>
                 <div className={styles['button-size']}>
                     <Button color="black">Read Article</Button>
@@ -217,14 +217,12 @@ function App() {
                 </div>
                 <div className={classNames(styles['two-columns'], styles['img-size'])}>
                     <Image
-                        fluid
-                        label={{ color: 'gr', corner: 'left', icon: 'close' }}
+                        label={{ corner: 'left', icon: 'close' }}
                         src="https://react.semantic-ui.com/images/wireframe/image.png"
                         className={styles['img-size']}
                         size="small"
                     />
                     <Image
-                        fluid
                         label={{ color: 'red', corner: 'right', icon: 'heart' }}
                         src="https://react.semantic-ui.com/images/wireframe/image.png"
                         floated="right"
