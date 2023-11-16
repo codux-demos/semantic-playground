@@ -24,12 +24,15 @@
   min-width: 400px;
   letter-spacing: -3px;
   line-height: 1.1em;
+  padding-top: 5px;
+  margin-left: -5px;
 }
 
 .description {
   font-family: FUTURA;
   font-weight: 300;
   font-size: 16px;
+  padding-left: 4px;
 }
 
 .buttons-gap {
@@ -110,7 +113,7 @@
 .wireframes {
   display: flex;
   justify-content: space-around;
-  transform: translateY(-4px);
+  margin-top: -4px;
 }
 
 .social-showcase {
@@ -124,4 +127,8 @@
   justify-content: space-between;
   margin-top: 6px;
   margin-bottom: 15px;
+}
+
+.buttons {
+  margin-top: 3px;
 }
