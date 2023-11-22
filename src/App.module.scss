@@ -1,41 +1,27 @@
 .page {
-  background: #d2c9ed;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  max-width: 1024px;
-  height: 100vh;
+  display: grid;
+  grid-template: auto auto / 1fr 1fr 1fr;
+  column-gap: 20px;
+  width: 1024px;
   margin: auto;
-}
-
-.flex-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 0 20px;
+  padding: 20px;
+  background: #d2c9ed;
 }
 
 .title {
   font-family: FUTURA;
   font-weight: 400;
   font-size: 80px;
-  min-width: 400px;
   letter-spacing: -3px;
   line-height: 1.1em;
-  padding-top: 5px;
-  margin-left: -5px;
 }
 
 .description {
   font-family: FUTURA;
-  font-weight: 300;
   font-size: 16px;
-  padding-left: 4px;
 }
 
-.buttons-gap {
+.actions {
   display: flex;
   gap: 10px;
   padding-top: 5px;
@@ -52,60 +38,54 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .two-columns:last-of-type {
   justify-content: space-evenly;
-  min-width: 320px;
   padding-top: 24px;
 }
 
-.right-card {
-  flex-basis: 100%;
-  min-width: 200px;
-}
-
-.div-img-size {
+.profile-img {
   width: 120px;
   height: 120px;
 }
 
-.buttons-gap-small {
+.button-showcase {
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+  min-width: 400px;
+}
+
+.buttons-row {
   gap: 5px;
   display: flex;
   align-items: end;
 }
 
-.buttons-showcase {
-  display: flex;
-  flex-flow: column wrap;
-  gap: 20px;
-  min-width: 400px;
-}
-
-.buttons-gap-small:last-of-type {
+.buttons-row:last-of-type {
   margin-top: 15px;
   gap: 24px;
 }
 
 .utils-showcase {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column;
   margin-top: 20px;
 }
 
-.one-line {
+.name-input {
   display: flex;
   align-items: center;
   min-width: 320px;
   padding-bottom: 10px;
 }
 
-.one-line > input {
+.name-input > input {
   height: 38px;
-  flex-grow: 1;
-  flex-basis: 180px;
+  flex: 1 1 180px;
 }
 
-.one-line > span {
+.name-input > span {
   height: 28px;
   flex-grow: 1;
 }
@@ -119,7 +99,6 @@
 .social-showcase {
   display: flex;
   flex-direction: column;
-  flex-basis: 335px;
 }
 
 .icons {
